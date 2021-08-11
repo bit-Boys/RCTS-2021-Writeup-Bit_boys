@@ -1,0 +1,9 @@
+We are given a long file labaled garbage that looks like hex. Using echo {hex} | xxd -d we get an ASCII representation which we can put in a file.
+Looking at the ASCII it looks like garbage too, but it always helps to use grep flag, which indeed shows us the flag hinding in the file.
+
+Commands:
+  cat message.txt
+  echo {copyed message} | xxd -d
+  echo {de-hexifyed} > ascii.txt
+  strings ascii.txt
+  strings ascii.txt | grep flag{.*}  // .* means as much of any charcter
