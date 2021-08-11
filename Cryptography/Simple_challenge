@@ -1,0 +1,19 @@
+SIMPLE CHALLENGE
+
+We are given the file message.txt. If we cat it out we get:
+
+Vm0weE1HRXlTWGxVYTJoVllXeGFVMWx0ZEV0alZuQlhWbXQwYVUxVk5WZFpW
+VlUxWVZaS2RHUkVXbFpOYWtVd1dWUkdSbVF4VG5GUmJHaHBVakpvVVZkc1pE
+UmpNV1JIWTBWb2JGSnJTbTlXYkZaM1RVWmtXR1JIZEZOTmEzQXdWbTF3WVZa
+WFNuTlhiVVpoVmpOU1RGa3llRk5XTVd3MlVtMXNhVkl5WTNsV1Z6QXhaREZr
+VmsxWVJsWmhhelZvVld4YWNrMUdjRmhOVlhSclVteEtNVmxyWkRSWFJrcFdZ
+a1JPVjFKc2NGUlZWRXBUVm0xS1IySkZOVk5TUlVVMQ==
+
+If you see somthing ending with equal signs, assume it is base64. We can use echo | base64 -d to attemp to decode it.
+We get another output that looks like base64. This suggests it is some nested base64 and if you repeat decoding it 6 times you will get the flag 
+This is a secret message: flag{3nc0d1ng_1s_n0t_3ncrypt10n!}
+
+COMMANDS:
+
+cat message.txt
+echo {base64} | base64 -d | base64 -d | base64 -d | base64 -d | base64 -d | base64 -d |
